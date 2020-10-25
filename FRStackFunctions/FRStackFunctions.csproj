@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>sn.snk</AssemblyOriginatorKeyFile>
+    <Description>User defined custom functions sample</Description>
+    <Company>MKCM Software, LLC</Company>
+    <Product>FRStack</Product>
+    <Copyright>Copyright © MKCM Software, LLC  2020</Copyright>
+    <Version>3.1.0</Version>
+    <Authors>Mark Hanson</Authors>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>F:\Work\Repos\FRStack-Custom-Functions\FRStackFunctions\Backup\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FlexLib">
+      <HintPath>C:\Program Files (x86)\FRStack3\FlexLib.dll</HintPath>
+    </Reference>
+    <Reference Include="FRStackRadio">
+      <HintPath>C:\Program Files (x86)\FRStack3\FRStackRadio.dll</HintPath>
+    </Reference>
+    <Reference Include="Util">
+      <HintPath>C:\Program Files (x86)\FRStack3\Util.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="call $(ProjectDir)IfAdminCopyDll.bat $(TargetPath) &quot;C:\Program Files (x86)\FRStack3\$(TargetFileName)&quot;&#xD;&#xA;" />
+  </Target>
+</Project>

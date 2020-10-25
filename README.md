@@ -7,6 +7,11 @@ You must have .Net programming skills and reviewed the Flex Radio System's FlexA
 I recommend you download the Community version of Visual Studio 2019 to build your add-in.
 https://visualstudio.microsoft.com/vs/community/
 
+You will compile your project against the FRStack3 installation folder as the Sample demonstrates however you should download and reference the FlexAPI for a complete understanding. <br/> 
+FlexAPI can be downloaded from FlexRadio's site 
+https://www.flexradio.com/software/?_categories_dropdown=api
+You must choose V3 of the API.
+
 
 **Configuration**
 
@@ -35,7 +40,7 @@ public class RadioFunctionItem
 }
 ```
 ***menu*** property is the menu item name where an underscore prefixes the keyboard shortcut. <br />
-eg. "Hello _There" the T is the shorcut. <br />
+eg. "Hello _There" the T is the shortcut. <br />
 <br />
 ***enabled*** property provides control of the menu item's state. False would grey out the menu item. <br />
 <br />
