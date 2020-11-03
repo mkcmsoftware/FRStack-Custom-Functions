@@ -35,6 +35,7 @@ namespace FRStackFunctions
         /// <summary>
         /// Initialize the functions.
         /// 
+        /// Note The Custom Function requires Rest, Hotkey or Menu as first parameter!
         /// 
         /// </summary>
         /// <param name="radioIn"></param>
@@ -149,7 +150,7 @@ namespace FRStackFunctions
         {
             object oret = await makeRestCall("RADIO", "INFO", null);
 
-            Debug.Assert(fparams == null || fparams.Length == 0, "Custom Function requires Rest, Hotkey or Menu as first parameter!");
+            Debug.Assert(fparams != null && fparams.Length >= 1, "This Custom Function requires Rest, Menu, Hotkey as first parameter, when Rest then param as second!");
 
             // if called by REST then don't render as string
             if (string.Compare((fparams as string[])?[0], "Rest", true) == 0)
