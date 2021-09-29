@@ -1,8 +1,8 @@
 # FRStack-Custom-Functions
 
-FRStack version 3 Custom Functions allows you to extended the FRStack Menu, Hotkeys and Rest API with your own .NET DLL.<br />
+FRStack version 3 Custom Functions allows you to extend the FRStack Menu, Hotkeys and Rest API with your own .NET DLL.<br />
 <br />
-You must have .Net programming skills and reviewed the Flex Radio System's FlexAPI SDK to utilized this feature. <br />
+You must have .Net programming skills and reviewed the Flex Radio System's FlexAPI SDK to utilize this feature. <br />
 <br />
 I recommend you download the Community version of Visual Studio 2019 to build your add-in.
 https://visualstudio.microsoft.com/vs/community/
